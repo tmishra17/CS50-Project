@@ -25,6 +25,8 @@ COUNTRIES = [
 @app.route("/", methods=["GET", "POST"])
 def index():
     if request.method == "POST":
+	# if the user sends a request to search for a product then process the country and item they requested 
+	# and output it to results.html
         search_results = request.form.get("search")
         country = request.form.get("country")
         if country not in COUNTRIES:
