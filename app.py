@@ -24,10 +24,6 @@ COUNTRIES = [
 
 @app.route("/", methods=["GET", "POST"])
 def index():
-    # This part is just finance, I can just copy and paste the code I already did,
-    # however I would like to implement the rest of the code they did my self, it is
-    # important for my learning.
-
     if request.method == "POST":
         search_results = request.form.get("search")
         country = request.form.get("country")
